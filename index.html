@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Hamza Naveed — Software Engineer specialising in full-stack web, Android development and SEO. Based in Pakistan." />
+  <meta name="author" content="Hamza Naveed" />
+  <meta property="og:title" content="Hamza Naveed — Software Engineer" />
+  <meta property="og:description" content="Full-stack developer, Android engineer and digital marketing strategist." />
+  <meta property="og:type" content="website" />
+  <title>Hamza Naveed — Software Engineer</title>
+  <link rel="icon" href="assets/logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <nav id="navbar" aria-label="Primary navigation">
+    <div class="container nav-inner">
+      <a href="#hero" class="nav-logo"><img src="assets/logo.png" alt="Hamza Naveed" class="nav-logo-img" /></a>
+      <ul class="nav-links" id="navLinksMenu" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="index_files/resume.pdf" download class="btn btn-primary nav-cta"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Resume</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section id="hero">
+    <div class="hero-orb orb-1" aria-hidden="true"></div>
+    <div class="hero-orb orb-2" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">Available for new opportunities</div>
+        <h1 class="hero-title">
+          <span class="mono" style="font-size:.45em;font-weight:400;display:block;margin-bottom:.4rem;color:var(--text-faint)">Hi, I&rsquo;m</span>
+          <span class="name gradient-text">Hamza Naveed</span>
+        </h1>
+        <p class="hero-sub"><span id="typed-text"></span><span class="typed-cursor" aria-hidden="true">|</span></p>
+        <p class="hero-desc">Passionate Software Engineer building scalable web applications, sleek Android apps, and high-performance digital experiences. I turn complex problems into clean, user-friendly solutions.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>View Projects</a>
+          <a href="#contact" class="btn btn-outline"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Get in Touch</a>
+        </div>
+        <div class="hero-stats reveal-stagger">
+          <div class="stat-item"><div class="stat-num" data-target="3" data-suffix="+">3+</div><div class="stat-label">Years Exp.</div></div>
+          <div class="stat-item"><div class="stat-num" data-target="20" data-suffix="+">20+</div><div class="stat-label">Projects</div></div>
+          <div class="stat-item"><div class="stat-num" data-target="15" data-suffix="+">15+</div><div class="stat-label">Clients</div></div>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-chip chip-1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>Full-Stack Dev</div>
+        <div class="hero-img-wrap"><img src="index_files/WhatsApp-Image-2025-06-02-at-1.49.25-PM-2-768x1024.jpeg" alt="Hamza Naveed" loading="eager" width="300" height="400" /></div>
+        <div class="hero-chip chip-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Available Now</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="reveal-left">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">Building things that <span class="gradient-text">matter</span></h2>
+          <p>Hi, I&rsquo;m <strong>Hamza Naveed</strong> &mdash; a passionate Software Engineer with a strong focus on building scalable and efficient solutions. I specialise in robust web applications, seamless user interfaces, and turning complex problems into clean, user-friendly experiences.</p>
+          <p>My expertise spans <strong>backend development</strong>, <strong>frontend technologies</strong>, <strong>Android app development</strong>, and <strong>digital marketing</strong> &mdash; allowing me to deliver full-stack, end-to-end solutions that align with business goals and enhance user engagement.</p>
+          <div class="about-highlights reveal-stagger">
+            <div class="highlight-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Full-Stack Web Development</div>
+            <div class="highlight-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Android App Development</div>
+            <div class="highlight-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Shopify &amp; E-Commerce</div>
+            <div class="highlight-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>SEO &amp; Digital Marketing</div>
+            <div class="highlight-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>UI/UX Design (Figma)</div>
+            <div class="highlight-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>REST APIs &amp; Databases</div>
+          </div>
+          <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
+            <a href="#contact" class="btn btn-primary">Hire Me</a>
+            <a href="index_files/resume.pdf" download class="btn btn-outline">Download CV</a>
+          </div>
+        </div>
+        <div class="reveal-right">
+          <div class="about-card">
+            <p class="about-card-title">// Tech Stack</p>
+            <div class="skills-cloud">
+              <span class="skill-tag">HTML5</span><span class="skill-tag">CSS3 / SCSS</span><span class="skill-tag">JavaScript</span><span class="skill-tag">TypeScript</span><span class="skill-tag">React.js</span><span class="skill-tag">Node.js</span><span class="skill-tag">PHP</span><span class="skill-tag">WordPress</span><span class="skill-tag">Shopify</span><span class="skill-tag">Java (Android)</span><span class="skill-tag">Kotlin</span><span class="skill-tag">Firebase</span><span class="skill-tag">MySQL</span><span class="skill-tag">MongoDB</span><span class="skill-tag">REST APIs</span><span class="skill-tag">Git / GitHub</span><span class="skill-tag">Figma</span><span class="skill-tag">SEO / SEM</span><span class="skill-tag">Google Analytics</span><span class="skill-tag">Linux / CLI</span>
+            </div>
+          </div>
+          <div class="about-card" style="margin-top:1.2rem;">
+            <p class="about-card-title">// Quick Facts</p>
+            <div style="display:flex;flex-direction:column;gap:.9rem;margin-top:1rem;">
+              <div style="display:flex;align-items:center;gap:.8rem;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span style="font-size:.9rem;color:var(--text-muted)">Pakistan</span></div>
+              <div style="display:flex;align-items:center;gap:.8rem;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg><span style="font-size:.9rem;color:var(--text-muted)">Open to Remote &amp; On-site</span></div>
+              <div style="display:flex;align-items:center;gap:.8rem;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span style="font-size:.9rem;color:var(--text-muted)">B.S. Software Engineering &mdash; COMSATS</span></div>
+              <div style="display:flex;align-items:center;gap:.8rem;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span style="font-size:.9rem;color:var(--success)">Available for new projects</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-tag">Portfolio</span>
+        <h2 class="section-title">Recent <span class="gradient-text">Projects</span></h2>
+        <p class="section-lead">A selection of work across web development, mobile apps and digital marketing.</p>
+      </div>
+      <div class="project-tabs reveal" role="tablist">
+        <button class="tab-btn active" data-tab="web" role="tab" aria-selected="true">&#127760; Web Development</button>
+        <button class="tab-btn" data-tab="android" role="tab" aria-selected="false">&#128241; Android Apps</button>
+        <button class="tab-btn" data-tab="seo" role="tab" aria-selected="false">&#128200; SEO &amp; Marketing</button>
+      </div>
+
+      <div class="tab-panel active projects-grid" id="tab-web" role="tabpanel">
+        <article class="project-card reveal"><div class="project-img"><img src="assets/geocoredynamic.png" alt="Geocore Dynamic Website" loading="lazy"/></div><div class="project-body"><p class="project-category">Web Development</p><h3 class="project-title">Geocore Dynamic</h3><p class="project-desc">Corporate website for an official Oulam Valve distributor in Pakistan. Features industrial product catalogues, flow control solutions showcase, and a professional contact system — built for the engineering sector.</p><div class="project-stack"><span class="stack-tag">WordPress</span><span class="stack-tag">PHP</span><span class="stack-tag">CSS3</span><span class="stack-tag">JavaScript</span></div><div class="project-links"><a href="https://geocoredynamic.com/" target="_blank" rel="noopener noreferrer" class="project-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Live Site</a></div></div></article>
+
+        <article class="project-card reveal"><div class="project-img"><img src="index_files/image-1.png" alt="PIPS College Website" loading="lazy"/></div><div class="project-body"><p class="project-category">Web Development</p><h3 class="project-title">PIPS College Website</h3><p class="project-desc">Full institutional website featuring admissions management, course catalogues, faculty pages and an online enquiry system. Optimised for performance and accessibility.</p><div class="project-stack"><span class="stack-tag">WordPress</span><span class="stack-tag">PHP</span><span class="stack-tag">CSS3</span><span class="stack-tag">MySQL</span></div><div class="project-links"><a href="https://pips.edu.pk/" target="_blank" rel="noopener noreferrer" class="project-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Live Site</a></div></div></article>
+
+        <article class="project-card reveal"><div class="project-img"><img src="index_files/image-2.png" alt="LumiNova Website" loading="lazy"/></div><div class="project-body"><p class="project-category">Web Development</p><h3 class="project-title">LumiNova Website</h3><p class="project-desc">Modern corporate website with dynamic landing pages, team showcases and a custom contact workflow. Focused on fast load times and a polished visual identity.</p><div class="project-stack"><span class="stack-tag">WordPress</span><span class="stack-tag">Elementor</span><span class="stack-tag">JavaScript</span><span class="stack-tag">CSS3</span></div><div class="project-links"><span class="project-link" style="color:var(--text-faint);cursor:default;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Private Client</span></div></div></article>
+
+        <article class="project-card reveal"><div class="project-img"><img src="index_files/image-11.png" alt="Golootlo Shopify Store" loading="lazy"/></div><div class="project-body"><p class="project-category">Shopify / E-Commerce</p><h3 class="project-title">Golootlo Shopify Store</h3><p class="project-desc">Custom Shopify storefront with branded theme, product filtering, wishlist functionality and integrated payment gateways optimised for conversion.</p><div class="project-stack"><span class="stack-tag">Shopify</span><span class="stack-tag">Liquid</span><span class="stack-tag">JavaScript</span><span class="stack-tag">CSS3</span></div><div class="project-links"><span class="project-link" style="color:var(--text-faint);cursor:default;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Private Client</span></div></div></article>
+
+        <article class="project-card reveal"><div class="project-img"><img src="index_files/image-10.png" alt="Paolorossi Shoes" loading="lazy"/></div><div class="project-body"><p class="project-category">Shopify / E-Commerce</p><h3 class="project-title">Paolorossi Shoes</h3><p class="project-desc">Premium Shopify e-commerce store for an Italian footwear brand. Custom product pages, size guides, multi-currency support and a luxury-feel theme.</p><div class="project-stack"><span class="stack-tag">Shopify</span><span class="stack-tag">Liquid</span><span class="stack-tag">SCSS</span><span class="stack-tag">JavaScript</span></div><div class="project-links"><a href="https://paolorossishoes.com/" target="_blank" rel="noopener noreferrer" class="project-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Live Site</a></div></div></article>
+
+        <article class="project-card reveal"><div class="project-img"><img src="index_files/image-9.png" alt="Orash Minerals" loading="lazy"/></div><div class="project-body"><p class="project-category">Web Development</p><h3 class="project-title">Orash Minerals</h3><p class="project-desc">Corporate site for a minerals export company featuring product catalogue, certifications showcase, enquiry forms and an SEO-optimised blog.</p><div class="project-stack"><span class="stack-tag">WordPress</span><span class="stack-tag">PHP</span><span class="stack-tag">SEO</span><span class="stack-tag">MySQL</span></div><div class="project-links"><a href="https://orushminerals.com/" target="_blank" rel="noopener noreferrer" class="project-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Live Site</a></div></div></article>
+
+        <article class="project-card reveal"><div class="project-img"><img src="index_files/image-8.png" alt="APS School Website" loading="lazy"/></div><div class="project-body"><p class="project-category">Web Development</p><h3 class="project-title">APS School Website</h3><p class="project-desc">Comprehensive school management website with admissions portal, parent dashboard, news &amp; events section and a custom gallery.</p><div class="project-stack"><span class="stack-tag">WordPress</span><span class="stack-tag">PHP</span><span class="stack-tag">JavaScript</span><span class="stack-tag">CSS3</span></div><div class="project-links"><a href="https://aps.edu.pk/" target="_blank" rel="noopener noreferrer" class="project-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Live Site</a></div></div></article>
+
+        <article class="project-card reveal"><div class="project-img"><img src="index_files/image-7.png" alt="The Aim School" loading="lazy"/></div><div class="project-body"><p class="project-category">Web Development</p><h3 class="project-title">The Aim School</h3><p class="project-desc">Modern school website with virtual tour section, staff profiles, fee structure pages and online admission form integration.</p><div class="project-stack"><span class="stack-tag">WordPress</span><span class="stack-tag">Elementor</span><span class="stack-tag">PHP</span><span class="stack-tag">MySQL</span></div><div class="project-links"><a href="https://theaimschool.pk/" target="_blank" rel="noopener noreferrer" class="project-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Live Site</a></div></div></article>
+
+        <article class="project-card reveal"><div class="project-img"><img src="index_files/image-6.png" alt="SIES Cadet College" loading="lazy"/></div><div class="project-body"><p class="project-category">Web Development</p><h3 class="project-title">SIES Cadet College</h3><p class="project-desc">Institutional website for a cadet college with alumni portal, activity logs, academics section and a streamlined admissions flow.</p><div class="project-stack"><span class="stack-tag">WordPress</span><span class="stack-tag">PHP</span><span class="stack-tag">CSS3</span><span class="stack-tag">MySQL</span></div><div class="project-links"><a href="https://siescadetcollegeabbottabad.com/" target="_blank" rel="noopener noreferrer" class="project-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Live Site</a></div></div></article>
+
+        <article class="project-card reveal"><div class="project-img"><img src="index_files/image-5.png" alt="1st Step Shopify" loading="lazy"/></div><div class="project-body"><p class="project-category">Shopify / E-Commerce</p><h3 class="project-title">1st Step Shopify</h3><p class="project-desc">Fully-customised Shopify store with branded theme, smart collection pages, upsell / cross-sell apps and checkout optimisation for higher conversion rates.</p><div class="project-stack"><span class="stack-tag">Shopify</span><span class="stack-tag">Liquid</span><span class="stack-tag">JavaScript</span><span class="stack-tag">SCSS</span></div><div class="project-links"><a href="https://1ststep.pk/" target="_blank" rel="noopener noreferrer" class="project-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Live Site</a></div></div></article>
+      </div>
+
+      <div class="tab-panel projects-grid" id="tab-android" role="tabpanel">
+        <article class="project-card reveal"><div class="project-img"><img src="index_files/image-20.png" alt="Smart Guardian" loading="lazy"/></div><div class="project-body"><p class="project-category">Android Development</p><h3 class="project-title">Smart Guardian</h3><p class="project-desc">Intelligent parental monitoring app with real-time GPS tracking, screen-time controls, app blocking and instant alert notifications to keep children safe online and offline.</p><div class="project-stack"><span class="stack-tag">Java</span><span class="stack-tag">Android SDK</span><span class="stack-tag">Firebase</span><span class="stack-tag">Google Maps API</span></div><div class="project-links"><a href="https://www.youtube.com/watch?v=SGFXqEn-GNQ&amp;t=16s" target="_blank" rel="noopener noreferrer" class="project-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>Demo Video</a></div></div></article>
+
+        <article class="project-card reveal"><div class="project-img"><img src="index_files/image-19.png" alt="Parental Controller" loading="lazy"/></div><div class="project-body"><p class="project-category">Android Development</p><h3 class="project-title">Parental Controller</h3><p class="project-desc">Advanced parental control app with granular app permissions, usage analytics, bedtime scheduling and a remote management dashboard for parents.</p><div class="project-stack"><span class="stack-tag">Java</span><span class="stack-tag">Android SDK</span><span class="stack-tag">Firebase</span><span class="stack-tag">SQLite</span></div><div class="project-links"><a href="https://www.youtube.com/watch?v=4vDjTzWprhc" target="_blank" rel="noopener noreferrer" class="project-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>Demo Video</a></div></div></article>
+
+        <article class="project-card reveal"><div class="project-img"><img src="index_files/image-21.png" alt="Shildar" loading="lazy"/></div><div class="project-body"><p class="project-category">UI/UX Design &middot; Android</p><h3 class="project-title">Shildar</h3><p class="project-desc">End-to-end UI/UX design for a social commerce Android app. Complete design system, user flows, interactive prototype and developer-ready Figma specs.</p><div class="project-stack"><span class="stack-tag">Figma</span><span class="stack-tag">Android Design</span><span class="stack-tag">Prototyping</span><span class="stack-tag">Design System</span></div><div class="project-links"><a href="https://www.figma.com/design/Wtc4MseSM3NjP38mK5Pdmc/Shildar?node-id=446-9136" target="_blank" rel="noopener noreferrer" class="project-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>View in Figma</a></div></div></article>
+      </div>
+
+      <div class="tab-panel projects-grid" id="tab-seo" role="tabpanel">
+        <article class="project-card reveal"><div class="project-img"><img src="index_files/image-22.png" alt="InvitoAI SEO" loading="lazy"/></div><div class="project-body"><p class="project-category">On-Page / Off-Page SEO</p><h3 class="project-title">InvitoAI</h3><p class="project-desc">Comprehensive SEO strategy for an AI SaaS platform. Keyword research, technical audits, content optimisation, authority link-building and structured data markup resulting in 60%+ organic traffic growth.</p><div class="project-stack"><span class="stack-tag">On-Page SEO</span><span class="stack-tag">Link Building</span><span class="stack-tag">Schema Markup</span><span class="stack-tag">Content Strategy</span></div><div class="project-links"><a href="https://invitoai.com" target="_blank" rel="noopener noreferrer" class="project-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Visit Site</a></div></div></article>
+
+        <article class="project-card reveal"><div class="project-img"><img src="index_files/image-23.png" alt="Quick Motorcycle SEO" loading="lazy"/></div><div class="project-body"><p class="project-category">On-Page / Off-Page SEO</p><h3 class="project-title">Quick Motorcycle</h3><p class="project-desc">Full SEO campaign for an automotive marketplace. Technical site audit, category page optimisation, local SEO, citation building and competitive analysis.</p><div class="project-stack"><span class="stack-tag">Technical SEO</span><span class="stack-tag">Local SEO</span><span class="stack-tag">Google Search Console</span><span class="stack-tag">Ahrefs</span></div><div class="project-links"><a href="https://quickmotorcycle.com" target="_blank" rel="noopener noreferrer" class="project-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Visit Site</a></div></div></article>
+
+        <article class="project-card reveal"><div class="project-img"><img src="index_files/image-24.png" alt="LumiOutDoor SEO" loading="lazy"/></div><div class="project-body"><p class="project-category">On-Page / Off-Page SEO</p><h3 class="project-title">LumiOutDoor</h3><p class="project-desc">E-commerce SEO overhaul for an outdoor lighting brand. Product page optimisation, category SEO, backlink acquisition and a blog content strategy to improve domain authority and organic revenue.</p><div class="project-stack"><span class="stack-tag">E-Commerce SEO</span><span class="stack-tag">Content Marketing</span><span class="stack-tag">Google Analytics</span><span class="stack-tag">Semrush</span></div><div class="project-links"><a href="https://lumioutdoors.com/" target="_blank" rel="noopener noreferrer" class="project-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Visit Site</a></div></div></article>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section id="education" class="section">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-tag">Background</span>
+        <h2 class="section-title">Education &amp; <span class="gradient-text">Experience</span></h2>
+        <p class="section-lead">My academic journey and professional milestones.</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal"><div class="timeline-side"><div class="timeline-content"><p class="timeline-period">2018 &mdash; 2022</p><h3 class="timeline-title">B.S. Software Engineering</h3><p class="timeline-org">COMSATS University Islamabad</p><p class="timeline-desc">Graduated with a strong foundation in algorithms, data structures, system design, software architecture and modern development practices. Final-year project: Smart Guardian &mdash; an Android-based parental monitoring application.</p></div></div><div class="timeline-dot" aria-hidden="true"></div><div class="timeline-side"></div></div>
+        <div class="timeline-item reveal"><div class="timeline-side"></div><div class="timeline-dot" aria-hidden="true"></div><div class="timeline-side"><div class="timeline-content"><p class="timeline-period">2022 &mdash; Present</p><h3 class="timeline-title">Full-Stack Developer</h3><p class="timeline-org">Freelance / Remote</p><p class="timeline-desc">Delivered 15+ web projects for clients across education, retail and e-commerce. Tech stack: WordPress, PHP, JavaScript, React, Shopify Liquid. Focus on performance, accessibility and business-driven UI/UX.</p></div></div></div>
+        <div class="timeline-item reveal"><div class="timeline-side"><div class="timeline-content"><p class="timeline-period">2021 &mdash; Present</p><h3 class="timeline-title">Android Developer</h3><p class="timeline-org">Personal &amp; Client Projects</p><p class="timeline-desc">Built production-level Android apps using Java and Kotlin with Firebase backends, real-time location services and clean MVVM architecture.</p></div></div><div class="timeline-dot" aria-hidden="true"></div><div class="timeline-side"></div></div>
+        <div class="timeline-item reveal"><div class="timeline-side"></div><div class="timeline-dot" aria-hidden="true"></div><div class="timeline-side"><div class="timeline-content"><p class="timeline-period">2023 &mdash; Present</p><h3 class="timeline-title">SEO &amp; Digital Marketing</h3><p class="timeline-org">Freelance Clients</p><p class="timeline-desc">On-page and off-page SEO campaigns, technical site audits, content strategy and authority link-building resulting in measurable organic traffic growth for clients across SaaS, automotive and outdoor e-commerce.</p></div></div></div>
+        <div class="timeline-item reveal"><div class="timeline-side"><div class="timeline-content"><p class="timeline-period">2016 &mdash; 2018</p><h3 class="timeline-title">HSSC (Pre-Engineering)</h3><p class="timeline-org">Board of Intermediate Education</p><p class="timeline-desc">Completed Higher Secondary School Certificate with distinction in Mathematics, Physics and Computer Science, laying the groundwork for a career in software engineering.</p></div></div><div class="timeline-dot" aria-hidden="true"></div><div class="timeline-side"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-tag">Contact</span>
+        <h2 class="section-title">Let&rsquo;s <span class="gradient-text">Work Together</span></h2>
+        <p class="section-lead">Have a project in mind? I&rsquo;d love to hear about it. Drop me a message and I&rsquo;ll get back to you within 24 hours.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="reveal-left">
+          <div class="contact-methods">
+            <a href="https://wa.me/923021084557" target="_blank" rel="noopener noreferrer" class="contact-method"><div class="contact-method-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/></svg></div><div class="contact-method-text"><span class="contact-method-label">WhatsApp</span><span class="contact-method-value">+92 302 1084557</span></div></a>
+            <a href="https://web.facebook.com/hamxa.jadun" target="_blank" rel="noopener noreferrer" class="contact-method"><div class="contact-method-icon" style="background:rgba(59,130,246,.12);color:#3b82f6;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></div><div class="contact-method-text"><span class="contact-method-label">Facebook</span><span class="contact-method-value">hamxa.jadun</span></div></a>
+            <a href="https://www.instagram.com/hamza.jadun" target="_blank" rel="noopener noreferrer" class="contact-method"><div class="contact-method-icon" style="background:rgba(236,72,153,.12);color:#ec4899;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div><div class="contact-method-text"><span class="contact-method-label">Instagram</span><span class="contact-method-value">hamza.jadun</span></div></a>
+            <a href="https://youtube.com/@HamzaJadun" target="_blank" rel="noopener noreferrer" class="contact-method"><div class="contact-method-icon" style="background:rgba(239,68,68,.12);color:#ef4444;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.45A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.97C5.12 20 12 20 12 20s6.88 0 8.59-.45a2.78 2.78 0 0 0 1.95-1.97A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></div><div class="contact-method-text"><span class="contact-method-label">YouTube</span><span class="contact-method-value">@HamzaJadun</span></div></a>
+            <a href="https://github.com/hamzajadun" target="_blank" rel="noopener noreferrer" class="contact-method"><div class="contact-method-icon" style="background:rgba(148,163,184,.1);color:var(--text-muted);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></div><div class="contact-method-text"><span class="contact-method-label">GitHub</span><span class="contact-method-value">hamzajadun</span></div></a>
+          </div>
+        </div>
+        <div class="reveal-right">
+          <div class="contact-form">
+            <form id="contactForm" novalidate>
+              <div class="form-row">
+                <div class="form-group"><label for="cf-name">Name</label><input type="text" id="cf-name" name="name" placeholder="John Doe" required autocomplete="name"/></div>
+                <div class="form-group"><label for="cf-email">Email</label><input type="email" id="cf-email" name="email" placeholder="john@example.com" required autocomplete="email"/></div>
+              </div>
+              <div class="form-group"><label for="cf-subject">Subject</label><input type="text" id="cf-subject" name="subject" placeholder="Project enquiry / Collaboration" required/></div>
+              <div class="form-group"><label for="cf-message">Message</label><textarea id="cf-message" name="message" placeholder="Tell me about your project&hellip;" required></textarea></div>
+              <button type="submit" class="btn btn-primary form-submit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">&lt;<span>HN</span> /&gt;</div>
+      <p class="footer-copy">&copy; 2025 Hamza Naveed &mdash; Built with care &amp; clean code.</p>
+      <div class="footer-social">
+        <a href="https://github.com/hamzajadun" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+        <a href="https://web.facebook.com/hamxa.jadun" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        <a href="https://www.instagram.com/hamza.jadun" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a href="https://youtube.com/@HamzaJadun" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.45A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.97C5.12 20 12 20 12 20s6.88 0 8.59-.45a2.78 2.78 0 0 0 1.95-1.97A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>
+        <a href="https://wa.me/923021084557" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <button id="scroll-top" aria-label="Scroll to top"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg></button>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
