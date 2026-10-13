@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ATS Resume Score Checker — Free</title>
+<style>
+  :root{
+    --bg:#0d0d17; --card:#16162a; --card2:#1c1c34; --accent:#7C6CFF; --accent2:#9d8fff;
+    --text:#eef0ff; --muted:#9aa0c3; --good:#34d399; --warn:#fbbf24; --bad:#f87171;
+    --radius:16px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0}
+  body{background:var(--bg); color:var(--text); font-family:'Segoe UI',system-ui,-apple-system,sans-serif; line-height:1.6; min-height:100vh}
+  .wrap{max-width:1060px; margin:0 auto; padding:28px 18px 60px}
+  header{text-align:center; padding:34px 10px 10px}
+  header h1{font-size:clamp(26px,5vw,42px); font-weight:800; letter-spacing:-.5px}
+  header h1 span{color:var(--accent2)}
+  header p{color:var(--muted); margin-top:8px; font-size:15px}
+  .badge{display:inline-block; background:rgba(124,108,255,.14); color:var(--accent2); border:1px solid rgba(124,108,255,.4);
+    padding:4px 14px; border-radius:999px; font-size:12px; font-weight:700; letter-spacing:1px; margin-bottom:14px}
+  .grid{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:22px}
+  @media(max-width:760px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--card); border:1px solid rgba(124,108,255,.16); border-radius:var(--radius); padding:20px}
+  .card h3{font-size:15px; margin-bottom:10px; color:var(--accent2)}
+  textarea{width:100%; min-height:230px; background:var(--card2); color:var(--text); border:1px solid rgba(124,108,255,.25);
+    border-radius:12px; padding:14px; font-size:13.5px; font-family:Consolas,monospace; resize:vertical}
+  textarea:focus{outline:none; border-color:var(--accent)}
+  .btnrow{display:flex; gap:10px; margin-top:22px; flex-wrap:wrap; justify-content:center}
+  button{cursor:pointer; border:none; border-radius:12px; padding:14px 30px; font-size:16px; font-weight:700; transition:.2s}
+  .btn-main{background:linear-gradient(135deg,var(--accent),#5a48e0); color:#fff; box-shadow:0 6px 24px rgba(124,108,255,.35)}
+  .btn-main:hover{transform:translateY(-2px); box-shadow:0 10px 30px rgba(124,108,255,.5)}
+  .btn-ghost{background:transparent; color:var(--muted); border:1px solid rgba(124,108,255,.3)}
+  .btn-ghost:hover{color:var(--text); border-color:var(--accent)}
+  #results{display:none; margin-top:26px}
+  .score-card{display:flex; gap:26px; align-items:center; background:var(--card); border:1px solid rgba(124,108,255,.2);
+    border-radius:var(--radius); padding:26px; flex-wrap:wrap}
+  .gauge{position:relative; width:170px; height:170px; flex-shrink:0}
+  .gauge svg{transform:rotate(-90deg)}
+  .gauge .num{position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center}
+  .gauge .num b{font-size:44px}
+  .gauge .num small{color:var(--muted); font-size:12px}
+  .verdict h2{font-size:22px; margin-bottom:6px}
+  .verdict p{color:var(--muted); font-size:14px; max-width:520px}
+  .cats{margin-top:18px; display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px}
+  .cat{background:var(--card); border-radius:12px; padding:14px 16px; border:1px solid rgba(124,108,255,.14)}
+  .cat .top{display:flex; justify-content:space-between; font-size:13px; margin-bottom:8px}
+  .bar{height:8px; background:var(--card2); border-radius:99px; overflow:hidden}
+  .bar i{display:block; height:100%; border-radius:99px; background:linear-gradient(90deg,var(--accent),var(--accent2)); transition:width .8s}
+  .tips{margin-top:18px}
+  .tip{background:var(--card); border-left:4px solid var(--accent); border-radius:10px; padding:14px 16px; margin-bottom:10px; font-size:14px}
+  .tip.good{border-color:var(--good)} .tip.warn{border-color:var(--warn)} .tip.bad{border-color:var(--bad)}
+  .tip b{display:block; margin-bottom:2px}
+  .tip p{color:var(--muted); font-size:13px}
+  .kw{display:flex; flex-wrap:wrap; gap:8px; margin-top:8px}
+  .kw span{font-size:12px; padding:4px 12px; border-radius:99px; background:rgba(52,211,153,.12); color:var(--good); border:1px solid rgba(52,211,153,.35)}
+  .kw span.miss{background:rgba(248,113,113,.1); color:var(--bad); border-color:rgba(248,113,113,.35)}
+  footer{text-align:center; color:var(--muted); font-size:12px; margin-top:44px}
+  footer a{color:var(--accent2); text-decoration:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="badge">100% FREE • NO SIGNUP • PRIVATE</div>
+    <h1>ATS Resume <span>Score Checker</span></h1>
+    <p>Paste your resume — get an instant ATS compatibility score with actionable fixes.<br>Everything runs in your browser. Nothing is uploaded.</p>
+  </header>
+
+  <div class="grid">
+    <div class="card">
+      <h3>📄 Your Resume Text</h3>
+      <textarea id="resume" placeholder="Paste your full resume text here (copy from your PDF/DOCX)..."></textarea>
+    </div>
+    <div class="card">
+      <h3>🎯 Job Description <span style="color:var(--muted);font-weight:400">(optional — boosts keyword analysis)</span></h3>
+      <textarea id="jd" placeholder="Paste the job description here to check keyword match..."></textarea>
+    </div>
+  </div>
+
+  <div class="btnrow">
+    <button class="btn-main" onclick="analyze()">⚡ Check My Score</button>
+    <button class="btn-ghost" onclick="loadSample()">Load sample resume</button>
+    <button class="btn-ghost" onclick="clearAll()">Clear</button>
+  </div>
+
+  <div id="results">
+    <div class="score-card">
+      <div class="gauge">
+        <svg width="170" height="170" viewBox="0 0 170 170">
+          <circle cx="85" cy="85" r="72" fill="none" stroke="#23233f" stroke-width="14"/>
+          <circle id="arc" cx="85" cy="85" r="72" fill="none" stroke="#7C6CFF" stroke-width="14"
+                  stroke-linecap="round" stroke-dasharray="452.4" stroke-dashoffset="452.4"/>
+        </svg>
+        <div class="num"><b id="scoreNum">0</b><small>/ 100</small></div>
+      </div>
+      <div class="verdict">
+        <h2 id="verdictTitle"></h2>
+        <p id="verdictText"></p>
+      </div>
+    </div>
+
+    <div class="cats" id="cats"></div>
+
+    <div class="tips">
+      <h3 style="margin:6px 0 12px; color:var(--accent2)">💡 Actionable Fixes</h3>
+      <div id="tips"></div>
+    </div>
+
+    <div class="card" style="margin-top:18px" id="kwCard" hidden>
+      <h3>🔑 Keyword Match vs Job Description</h3>
+      <div class="kw" id="kwList"></div>
+    </div>
+  </div>
+
+  <footer>Built with AI • <a href="https://hamzajadun.github.io">hamzajadun.github.io</a> • Your data never leaves this page 🔒</footer>
+</div>
+
+<script>
+const ACTION_VERBS = ["achieved","led","managed","developed","created","improved","increased","reduced","built","designed","launched","delivered","implemented","optimized","streamlined","grew","saved","mentored","spearheaded","drove","executed","founded","negotiated","automated","migrated","deployed","architected","collaborated","initiated","pioneered","transformed","accelerated","boosted","cut","generated","owned","shipped"];
+const STOP = new Set(("a,an,the,and,or,of,to,in,on,for,with,as,at,by,from,is,are,was,were,be,been,have,has,had,do,does,did,will,would,can,could,should,this,that,these,those,it,its,you,your,we,our,they,their,he,she,his,her,i,my,me,us,not,no,so,if,then,than,too,very,just,about,into,over,after,before,between,through,during,under,above,up,down,out,off,all,any,both,each,few,more,most,other,some,such,only,own,same,also,per,via,etc,including,using,used,use,based,within,across,along,toward,upon,among").split(","));
+
+function loadSample(){
+  document.getElementById('resume').value =
+`HAMZA NAVEED
+Android & Web Developer | hamza@example.com | +92 300 1234567 | Abbottabad, Pakistan | linkedin.com/in/example
+
+PROFESSIONAL SUMMARY
+Results-driven Android and Web Developer with 4+ years of experience building mobile apps with Kotlin and Jetpack Compose, and modern websites with Next.js and Laravel. Shipped 15+ projects for clients across 3 countries.
+
+EXPERIENCE
+Senior Android Developer — TechSoft Solutions, Lahore (2022–Present)
+• Led a team of 3 developers to rebuild the flagship app with Jetpack Compose, improving crash-free sessions by 18%
+• Implemented offline-first architecture with Room database, reducing load times by 40%
+• Automated release pipeline with GitHub Actions, cutting release time from 2 days to 3 hours
+
+Web Developer — Freelance (2020–2022)
+• Developed 12 client websites with Next.js and Laravel, achieving 98% client satisfaction
+• Optimized Core Web Vitals, boosting average Lighthouse score from 61 to 94
+
+EDUCATION
+BS Computer Science — COMSATS University (2016–2020)
+
+SKILLS
+Kotlin, Java, Jetpack Compose, JavaScript, TypeScript, React, Next.js, Node.js, PHP, Laravel, Firebase, MySQL, Git, REST APIs`;
+  document.getElementById('jd').value =
+`We are hiring an Android Developer with strong Kotlin and Jetpack Compose skills. Experience with Firebase, REST APIs, MVVM architecture, and Git required. Familiarity with CI/CD pipelines and Agile teamwork is a plus.`;
+}
+function clearAll(){
+  document.getElementById('resume').value='';
+  document.getElementById('jd').value='';
+  document.getElementById('results').style.display='none';
+}
+
+function keywords(text){
+  return text.toLowerCase().replace(/[^a-z0-9+#.\s]/g,' ')
+    .split(/\s+/).filter(w=>w.length>2 && !STOP.has(w));
+}
+function topKeywords(text,n){
+  const f={};
+  keywords(text).forEach(w=>f[w]=(f[w]||0)+1);
+  return Object.entries(f).sort((a,b)=>b[1]-a[1]).slice(0,n).map(e=>e[0]);
+}
+
+function analyze(){
+  const resume=document.getElementById('resume').value.trim();
+  if(resume.length<100){ alert('Please paste your resume text first (at least a few lines).'); return; }
+  const jd=document.getElementById('jd').value.trim();
+  const lower=resume.toLowerCase();
+  const words=resume.split(/\s+/).filter(Boolean);
+  const tips=[];
+  const cats=[];
+
+  // 1. Contact info (15)
+  let c1=0; const c1t=[];
+  if(/[\w.+-]+@[\w-]+\.[\w.]+/.test(resume)){c1+=7;} else c1t.push('Add a professional email address.');
+  if(/(\+?\d[\d\s-]{7,}\d)/.test(resume)){c1+=4;} else c1t.push('Add your phone number.');
+  if(/linkedin\.com|github\.com|portfolio|website/i.test(resume)){c1+=4;} else c1t.push('Add LinkedIn / GitHub / portfolio links.');
+  cats.push({name:'📇 Contact Info',score:Math.min(15,c1),max:15});
+  c1t.forEach(t=>tips.push({k:'bad',t:'Missing contact details',d:t}));
+
+  // 2. Sections (20)
+  let c2=0; const need=['experience','education','skill'];
+  need.forEach(s=>{ if(lower.includes(s)){c2+=6;} else tips.push({k:'warn',t:'Missing "'+s+'" section',d:'ATS expects a clear '+s+' heading.'}); });
+  if(/summary|objective|profile/.test(lower)) c2+=2;
+  cats.push({name:'📑 Key Sections',score:Math.min(20,c2),max:20});
+
+  // 3. Length (15)
+  let c3=0;
+  if(words.length<200){tips.push({k:'bad',t:'Resume too short ('+words.length+' words)',d:'Aim for 400–800 words (1–2 pages). Add achievements and skills.'});}
+  else if(words.length<=900){c3=15;}
+  else{c3=8; tips.push({k:'warn',t:'Resume too long ('+words.length+' words)',d:'Trim to under 900 words — recruiters skim for 7 seconds.'});}
+  cats.push({name:'📏 Ideal Length',score:c3,max:15});
+
+  // 4. Action verbs & bullets (20)
+  const foundVerbs=ACTION_VERBS.filter(v=>lower.includes(v));
+  const bullets=(resume.match(/[•\-\*]/g)||[]).length;
+  let c4=Math.min(12, foundVerbs.length*2) + Math.min(8, bullets);
+  if(foundVerbs.length<5) tips.push({k:'warn',t:'Weak action verbs ('+foundVerbs.length+' found)',d:'Start bullets with strong verbs: Led, Built, Improved, Delivered…'});
+  else tips.push({k:'good',t:'Strong action verbs',d:foundVerbs.slice(0,6).join(', ')+(foundVerbs.length>6?'…':'')});
+  if(bullets<5) tips.push({k:'warn',t:'Few bullet points',d:'Use bullets for achievements — they are 3x easier to skim.'});
+  cats.push({name:'💪 Impact & Bullets',score:c4,max:20});
+
+  // 5. Keywords (20)
+  let c5=0; let kwFound=[], kwMiss=[];
+  if(jd.length>30){
+    const jk=topKeywords(jd,20);
+    kwFound=jk.filter(k=>lower.includes(k));
+    kwMiss=jk.filter(k=>!lower.includes(k));
+    c5=Math.round(kwFound.length/jk.length*20);
+    if(kwMiss.length) tips.push({k:'warn',t:kwMiss.length+' job keywords missing',d:'Weave these naturally into experience/skills: '+kwMiss.slice(0,8).join(', ')});
+    else tips.push({k:'good',t:'Excellent keyword match',d:'Your resume mirrors the job description vocabulary.'});
+  } else {
+    const uniq=new Set(keywords(resume));
+    c5=Math.min(20, Math.round(uniq.size/12));
+    tips.push({k:'warn',t:'No job description pasted',d:'Paste the JD for a precise keyword-match score.'});
+  }
+  cats.push({name:'🔑 Keyword Match',score:c5,max:20});
+
+  // 6. Red flags (10)
+  let c6=10;
+  if(/lorem ipsum/i.test(resume)){c6-=5; tips.push({k:'bad',t:'Placeholder text found',d:'Remove "lorem ipsum" before sending!'});}
+  if((resume.match(/[A-Z]{5,}/g)||[]).length>8){c6-=3; tips.push({k:'warn',t:'Too much ALL-CAPS text',d:'ATS and humans both prefer normal case headings.'});}
+  if(/photo|picture|selfie/i.test(resume)){c6-=2; tips.push({k:'warn',t:'Mentions a photo',d:'Photos confuse ATS parsers and invite bias — remove.'});}
+  cats.push({name:'🚩 ATS Red Flags',score:Math.max(0,c6),max:10});
+
+  const total=cats.reduce((a,c)=>a+c.score,0);
+
+  // verdict
+  let vt, vx, col;
+  if(total>=80){vt='Excellent — ready to submit! 🎉'; vx='Your resume is well-optimized for ATS systems. Fix any remaining tips above and send it with confidence.'; col='#34d399';}
+  else if(total>=60){vt='Good, but improvable 👍'; vx='You are close. Work through the fixes above — small keyword and formatting tweaks can add 15+ points.'; col='#7C6CFF';}
+  else if(total>=40){vt='Needs work ⚠️'; vx='An ATS would likely rank this below competing resumes. Prioritize the red fixes above before applying.'; col='#fbbf24';}
+  else{vt='At high risk of rejection 🚨'; vx='This resume would likely be filtered out. Rewrite using the fixes above, then re-check your score.'; col='#f87171';}
+
+  document.getElementById('verdictTitle').textContent=vt;
+  document.getElementById('verdictText').textContent=vx;
+  document.getElementById('scoreNum').textContent=total;
+  document.getElementById('arc').setAttribute('stroke',col);
+
+  const cc=document.getElementById('cats'); cc.innerHTML='';
+  cats.forEach(c=>{
+    const pct=Math.round(c.score/c.max*100);
+    cc.innerHTML+=`<div class="cat"><div class="top"><span>${c.name}</span><b>${c.score}/${c.max}</b></div><div class="bar"><i style="width:0%"></i></div></div>`;
+  });
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    cc.querySelectorAll('.bar i').forEach((el,i)=>{el.style.width=Math.round(cats[i].score/cats[i].max*100)+'%';});
+  }));
+
+  const tp=document.getElementById('tips'); tp.innerHTML='';
+  tips.forEach(t=>{ tp.innerHTML+=`<div class="tip ${t.k}"><b>${t.t}</b><p>${t.d}</p></div>`; });
+
+  const kc=document.getElementById('kwCard');
+  if(jd.length>30){
+    kc.hidden=false;
+    document.getElementById('kwList').innerHTML =
+      kwFound.map(k=>`<span>✓ ${k}</span>`).join('') + kwMiss.map(k=>`<span class="miss">✕ ${k}</span>`).join('');
+  } else kc.hidden=true;
+
+  const r=document.getElementById('results');
+  r.style.display='block';
+  r.scrollIntoView({behavior:'smooth'});
+  const arc=document.getElementById('arc'), C=452.4;
+  arc.style.transition='none'; arc.style.strokeDashoffset=C;
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    arc.style.transition='stroke-dashoffset 1.2s ease'; arc.style.strokeDashoffset=C-(C*total/100);
+  }));
+  // animate number
+  let n=0; const iv=setInterval(()=>{ n+=Math.max(1,Math.round(total/40)); if(n>=total){n=total;clearInterval(iv);} document.getElementById('scoreNum').textContent=n; },30);
+}
+</script>
+</body>
+</html>
