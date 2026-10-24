@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dutch Bros Meal Builder — Cost and Calorie Calculator — Menu Hub</title>
+<meta name="description" content="Build a Dutch Bros order and estimate total cost and calories. Estimate only, not a checkout. Not affiliated with Dutch Bros.">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header>
+  <p><a href="../">← Menu Hub</a> &nbsp;|&nbsp; <a href="./">← Dutch Bros</a></p>
+  <h1>Dutch Bros Meal Builder</h1>
+  <p>Pick items, see an estimated total cost and calories. This is an estimate based on typical medium prices — your local stand's prices will differ.</p>
+  <p class="disclaimer">Not affiliated with Dutch Bros. Not a checkout or ordering system.</p>
+</header>
+<main>
+  <div class="builder">
+    <div id="items"></div>
+    <button type="button" onclick="calculate()">Calculate total</button>
+    <button type="button" onclick="clearAll()">Clear</button>
+    <div class="total" id="total">Total: $0.00 — 0 calories (estimate)</div>
+    <p class="note">Prices in this calculator are medium-size estimates from data/dutch-bros.json. Edit that file to update prices for all Meal Builder items at once.</p>
+  </div>
+  <p><a href="menu.html">← Full menu</a></p>
+</main>
+<script src="../assets/meal-builder.js"></script>
+<footer><p><a href="../">Menu Hub</a></p></footer>
+</body>
+</html>
